@@ -103,7 +103,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 //        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
 
         if (mLocationPermissionsGranted) {
-            //getDeviceLocation();
+            getDeviceLocation();
 
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                     != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this,
@@ -152,7 +152,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private void moveCamera(LatLng latLng, float zoom/*, PlaceInfo placeInfo*/){
         Log.d(TAG, "moveCamera: moving the camera to: lat: " + latLng.latitude + ", lng: " + latLng.longitude );
-        mMap.addMarker(new MarkerOptions().position(latLng).title("Current Location"));
+        //mMap.addMarker(new MarkerOptions().position(latLng).title("Current Location"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, zoom));
 
 //        mMap.clear();
